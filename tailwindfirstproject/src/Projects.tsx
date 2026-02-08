@@ -1,9 +1,16 @@
+import { usePageSeo } from './hooks/usePageSeo'
 import {Database, Code, Atom, Activity} from 'lucide-react'
 
 const Projects = () =>{
+    usePageSeo({
+        title: 'Wilhelm Rolstad | Projects',
+        description: 'Projects built by Wilhelm Rolstad, including a fitness tracking application with React, Java Spring Boot, and Supabase.',
+        canonicalPath: '/Projects',
+    })
+
     return(
         <>
-            <div className="flex flex-col text-[var(--text-color)] border border-[var(--text-color)] rounded-2xl p-5 m-5 gap-3 w-[80vw] mx-auto">
+            <div className="flex flex-col text-[var(--text-color)] border border-[var(--text-color)] rounded-2xl p-5 m-5 gap-3 w-[80vw] mx-auto max-w-[var(--page-width)] h-screen">
                 <h2 className="text-2xl">Fitness application</h2>
                 <div className="flex flex-row gap-3">
                     <p>Fitness application to track progression</p>
