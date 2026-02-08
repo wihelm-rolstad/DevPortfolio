@@ -1,4 +1,11 @@
+import { usePageSeo } from './hooks/usePageSeo'
 const Contact = () => {
+    usePageSeo({
+        title: 'Wilhelm Rolstad | Contact',
+        description: 'Contact Wilhelm Rolstad by email, phone, GitHub, LinkedIn, or the contact form.',
+        canonicalPath: '/Contact',
+    })
+
     return(
         <>  
         <div className="flex flex-col border border-[var(--text-color)] rounded-2xl text-[var(--text-color)] mx-auto p-5 m-5 w-[70vw] gap-5">
