@@ -36,7 +36,7 @@ function Navbar({ darkBg, onToggleBg }: NavbarProps) {
   return (
     <div
       className="sticky top-0 w-full bg-[var(--bg-color)] h-20 p-5 text-lg text-[var(--text-color)]
-      flex flex-row gap-10 items-center">
+      flex flex-row gap-10 items-center z-50">
         <div className="text-2xl cursor-default">Wilhelm Rolstad</div>
         <button className="ml-auto cursor-pointer hover:scale-110 transition duration-200" onClick={() => navigate("/")}>Home</button>
         <button className="cursor-pointer hover:scale-110 transition duration-200" onClick={() => navigate("/Cv")} >CV</button>

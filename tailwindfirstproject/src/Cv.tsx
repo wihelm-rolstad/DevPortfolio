@@ -23,7 +23,7 @@ const CV = () => {
                         <p>Studiespessialiserende med fokus på realfag</p>
                         <p>AUG 2019 - JUN 2022</p>
                     </div>
-                    <StbIcon className="w-full h-auto block text-blue-700 -translate-y-[-6rem]" />
+                    <StbIcon className="w-full h-auto block text-blue-700 -translate-y-[-4.2rem]" />
                 </div>
 
                  <div className="relative bg-green-400 m-2 h-70 rounded-2xl overflow-hidden">
@@ -36,19 +36,26 @@ const CV = () => {
                 </div>
         
 
-                <div className="bg-blue-400 m-2 rounded-2xl h-70 overflow-hidden">
-                    <h2 className="text-2xl">NTNU TRONDHEIM</h2>
-                    <p>Bachelor i informatikk</p>
-                    <img src={ntnuLogo} alt="NTNU" className="w-40"></img>
-                    <p>AUG 2024 -</p>
-                    <GlosIcon className="w-full h-auto block text-blue-600 -translate-y-22"/>
+                <div className="relative bg-blue-400 m-2 rounded-2xl h-70 overflow-hidden">
+                    <div className="absolute top-0 left-0 p-4">
+                        <h2 className="text-2xl">NTNU TRONDHEIM</h2>
+                        <p>Bachelor i informatikk</p>
+                        <p>AUG 2024 -</p>
+                    </div>
+                    <div className="absolute top-0 right-0 p-6">
+                        <img src={ntnuLogo} alt="NTNU" className="w-40"></img>
+                    </div>
+                    <GlosIcon className="w-full h-auto block text-blue-600 -translate-y-[-1.6rem]"/>
                 </div>
 
-                <div className="bg-red-500  m-2 rounded-2xl h-70 overflow-hidden">
-                    <h2 className="text-2xl">STOREBRAND FORSIKRING</h2>
-                    <p>Skaderådgiver Vikar</p>
-                    <p>Seasonal JUN 2025 -</p>
-                    <StorebrandIcon className="w-full h-auto block text-red-700 -translate-y-[-2rem]"/>
+                <div className="relative bg-red-500  m-2 rounded-2xl h-70 overflow-hidden">
+                    <div className="absolute top-0 left-0 p-4">
+                        <h2 className="text-2xl">STOREBRAND FORSIKRING</h2>
+                        <p>Skaderådgiver Vikar</p>
+                        <p>Sesong JUN 2025 -</p>
+                    </div>
+                    <StorebrandIcon className="w-full h-auto block text-red-700 -translate-y-[-4.6rem]"/>
+                    
                 </div>
             </div>
         </>

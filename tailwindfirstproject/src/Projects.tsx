@@ -1,5 +1,5 @@
 import { usePageSeo } from './hooks/usePageSeo'
-import {Database, Code, Atom, Activity} from 'lucide-react'
+import {Database, Code, Atom, Activity, ExternalLink} from 'lucide-react'
 
 const Projects = () =>{
     usePageSeo({
@@ -41,7 +41,9 @@ const Projects = () =>{
 
                     
                 </div>
-                <a className="bg-white text-black w-30 rounded p-2" href=""> Check it out!</a>
+                <a className="inline-flex items-center gap-2 border border-[var(--text-color)] bg-[var(--bg-color)] rounded-lg px-4 py-2 text-[var(--text-color)] w-40
+                hover:scale-110 transition duration-200" 
+                href="https://github.com/wihelm-rolstad/WebFrontEnd-Backend-Database"> Check it out! <ExternalLink/></a>
             </div>
         </>
     )
