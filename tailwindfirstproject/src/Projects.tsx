@@ -43,7 +43,7 @@ const Projects = () =>{
                 </div>
                 <a className="inline-flex items-center gap-2 border border-[var(--text-color)] bg-[var(--bg-color)] rounded-lg px-4 py-2 text-[var(--text-color)] w-40
                 hover:scale-110 transition duration-200" 
-                href="https://github.com/wihelm-rolstad/WebFrontEnd-Backend-Database"> Check it out! <ExternalLink/></a>
+                href="https://liftlog.no"> Check it out! <ExternalLink/></a>
             </div>
         </>
     )
