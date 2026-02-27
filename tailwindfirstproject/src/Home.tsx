@@ -1,5 +1,6 @@
 import { usePageSeo } from './hooks/usePageSeo'
-import "@google/model-viewer";
+import Spline from '@splinetool/react-spline';
+
 
 const Dashboard = () => {
     usePageSeo({
@@ -22,16 +23,6 @@ const Dashboard = () => {
                         <button className="bg-[var(--text-color)] border p-2 rounded" >CONTACT ME</button>
                 </div>
                 <div className="mt-6">
-                    <model-viewer
-                        src="/macbook.glb"
-                        camera-controls
-                        auto-rotate
-                        rotation-per-second="40deg"   // faster (default is 30deg)
-                        auto-rotate-delay="0"
-                        environment-image="neutral"
-                        shadow-intensity="1"
-                        style={{ width: "100%", height: 500, background: "transparent", borderRadius: 12 }}
-                    />
                 </div>
                 
             </div>
@@ -40,3 +31,6 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+
+
+     

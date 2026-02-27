@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
+import type { Application } from '@splinetool/runtime'
 
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Home from './Home'
@@ -7,9 +8,11 @@ import Footer from './components/Footer'
 import Projects from './Projects'
 import CV from './Cv'
 import Contact from './Contact'
+import F1 from './f1_car'
 
 import './App.css'
 
+const CV_SPLINE_TRIGGER = 'switch'
 
 function App() {
 
@@ -24,12 +27,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar   darkBg={darkBg} onToggleBg={() => setDarkBg((v) => !v)} />
+        <Navbar
+          darkBg={darkBg}
+          onToggleBg={() => setDarkBg((v) => !v)}
+        />
         <Routes>
           <Route path="/" element={<Home/>} ></Route>
           <Route path="/Projects" element={<Projects/>}/>
-          <Route path="/Cv" element={<CV/>}/>
-           <Route path="/Contact" element={<Contact/>}/>
+          <Route path="/Cv" element={<CV/>} />
+          <Route path="/Contact" element={<Contact/>}/>
+            <Route path="/F1_car" element={<F1/>}/>
         </Routes>
       </BrowserRouter>
 

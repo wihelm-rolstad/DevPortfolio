@@ -5,10 +5,11 @@ import {Moon, Sun, Languages} from 'lucide-react'
 type NavbarProps = {
     darkBg: boolean
     onToggleBg: () => void
+    onThemeToggleSpline?: () => void
 }   
 
 
-function Navbar({ darkBg, onToggleBg }: NavbarProps) {
+function Navbar({ darkBg, onToggleBg, onThemeToggleSpline }: NavbarProps) {
 
     const [isHidden, setIsHidden] = useState(true)
     const languageVisibility = isHidden ? 'hidden' : '';
@@ -28,6 +29,7 @@ function Navbar({ darkBg, onToggleBg }: NavbarProps) {
     }
 
     function handleThemeToggle() {
+        onThemeToggleSpline?.()
         if (darkBg) setLightTheme()
         else setDarkTheme()
         onToggleBg()
@@ -39,11 +41,11 @@ function Navbar({ darkBg, onToggleBg }: NavbarProps) {
       flex flex-row gap-10 items-center z-50">
         <div className="text-2xl cursor-default">Wilhelm Rolstad</div>
         <button className="ml-auto cursor-pointer hover:scale-110 transition duration-200" onClick={() => navigate("/")}>Home</button>
-        <button className="cursor-pointer hover:scale-110 transition duration-200" onClick={() => navigate("/Cv")} >CV</button>
         <button className="cursor-pointer hover:scale-110 transition duration-200" onClick={() => navigate("/Projects")}>Projects</button>
+                <button className="cursor-pointer hover:scale-110 transition duration-200" onClick={() => navigate("/Cv")} >CV</button>
         <button className="cursor-pointer hover:scale-110 transition duration-200"onClick={() => navigate("/Contact")} >Contact</button>
-        <button onClick={handleThemeToggle} className="cursor-pointer hover:scale-110 transition duration-200">
-        {darkBg ? <Sun /> : <Moon />}
+        <button onClick={handleThemeToggle } className="cursor-pointer hover:scale-110 transition duration-200">
+        {darkBg ? <Sun /> : <Moon />} 
         </button>
         <Languages className="cursor-pointer hover:scale-110 transition duration-200" onClick={() => setIsHidden((v) => !v)}></Languages>
 
